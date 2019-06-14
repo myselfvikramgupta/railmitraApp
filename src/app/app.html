@@ -1,15 +1,39 @@
 <ion-menu [content]="content">
-  <ion-header>
+  <ion-header class="bg-info">
     <ion-toolbar>
-      <ion-title>Menu</ion-title>
+
+      <ion-grid>
+        <ion-row style="text-align: center;">
+          <ion-col col-12>
+            <div class="user-avatar">
+              <img src="https://www.railmitra.com/uploads/images/1543849065_logo.png" style="width:200px; ">
+            </div>
+          </ion-col>
+       <br/><br/>
+        </ion-row>
+        <ion-row class="other-data">
+          <ion-col class="column">
+            <button ion-button icon-left full class="btn btn-sm btn-neutral">
+              <ion-icon name="contact"></ion-icon>
+              Sign up
+            </button>
+          </ion-col>
+          <ion-col class="column">
+            <button ion-button icon-left full class="btn btn-sm btn-neutral" >
+              <ion-icon name="log-in"></ion-icon>
+              Login
+            </button>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
+      <sidemenu></sidemenu>
     </ion-list>
   </ion-content>
 

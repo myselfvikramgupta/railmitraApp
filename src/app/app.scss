@@ -1,16 +1,78 @@
-// http://ionicframework.com/docs/theming/
+ion-content
+{
+     background-color: #f4f5f7 !important;
+}
 
+.profile-bg {
+  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);;
+}
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+	.toolbar-background {
+    background:#263238;
+  }
+.user-profile {
+  .other-data {
+    .column {
+      &:first-child {
+        border-right: 1px solid rgba(255, 255, 255, .25);
+      }
+    }
+  }
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+.btn {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    display: inline-block;
+    padding: .625rem 1.25rem;
+    height: 45px;
+    user-select: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+.btn-sm
+{
+	
+	height:30px;
+}
+.form-control
+{
+	font-size: 16px;
+    
+    display: block;
+    width: 100%;
+    height: 45px;
+    padding: .625rem .75rem;
+    transition: all .2s cubic-bezier(.68,-.55,.265,1.55);
+    color: #8898aa;
+    border: 1px solid #cad1d7;
+    border-radius: .25rem;
+    background-color:#f4f5f7 !important;
+    background-clip: padding-box;
+    box-shadow: none;
+}
+.form-control-alternative {
+    transition: box-shadow .15s ease;
+    border: 0;
+    box-shadow: 0 1px 3px rgba(50,50,93,.15), 0 1px 0 rgba(0,0,0,.02);
+}
+.btn-warning {
+    color: #fff;
+    border-color: #fb6340;
+    background-color: #fb6340;
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+}
+.btn-neutral {
+    color: #212529;
+    border-color: #fff;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+}

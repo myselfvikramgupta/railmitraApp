@@ -1,5 +1,5 @@
-<ion-header>
-  <ion-navbar>
+<ion-header >
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -7,12 +7,90 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content no-padding >
+ <div class="box">
+   <div class="form-group">
+     <input type="Number" placeholder="Enter 10 Digits Pnr" class="form-control form-control-alternative">
+    </div>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+    <button ion-button block class="btn btn-warning">  Search Food</button>
+ </div>
+ <ion-row padding> 
+    <ion-col> <div text-left><h4 class="rail-tool-title">Rail Tools</h4></div></ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+ <div class="scrolling-wrapper">
+  <div class="card">
+    <img src="assets/imgs/pnr.png">
+    <p >Pnr Status</p>
+  </div>
+  <div class="card">
+    <img src="assets/imgs/timetable.png" >
+    <p>Time Table</p>
+  </div>
+  <div class="card">
+    <img src="assets/imgs/running.png" >
+    <p>Train Live  Status</p>
+  </div>
+  <div class="card">
+    <img src="assets/imgs/seat.png" >
+    <p>Seat Availability</p>
+  </div>
+  <div class="card" text-wrap>
+    <img src="assets/imgs/bws.png" >
+    <p>Trains B/W Stations</p>
+  </div>
+  
+  <div class="card">
+    <img src="assets/imgs/livearr.png" >
+    <p>Live Arr/Dep</p>
+  </div>
+  <div class="card">
+    <img src="assets/imgs/food-order.png" >
+    <p>Food Order</p>
+  </div>
+   <div class="card">
+    <img src="assets/imgs/wallet.png" >
+    <p>My Wallet</p>
+  </div>
+</div>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+<ion-row padding > 
+  <ion-col col-1 ><img src="assets/imgs/gift.png" ></ion-col>
+    <ion-col col-11 > <div text-left> <h4 class="rail-tool-title">RailMitra Exclusive Offers</h4></div></ion-col>
+    </ion-row>
+    <div class="slider-box">
+     <ion-slides pager>
+    <ion-slide>
+     <img src="assets/imgs/slide1.jpg" class="slider-img" >
+    </ion-slide>
+    <ion-slide> 
+     <img src="assets/imgs/slide1.jpg" class="slider-img" >
+    </ion-slide>
+    <ion-slide>
+     <img src="assets/imgs/slide1.jpg" class="slider-img" >
+    </ion-slide>
+  </ion-slides>
+  </div>
+  <ion-row padding> 
+ 
+    <ion-col col-12 > <div text-left> <h4 class="rail-tool-title">RailMitra News</h4></div></ion-col>
+    </ion-row>
+    <div class="blog-slider">
+    <ion-card  *ngFor="let item of garray;" class="blog-card" style="width: 80%;">
+  <img src="{{item.img}} " style="width: 100%;height:150px;" />
+  <ion-card-content>
+    <ion-card-title text-wrap  (click)="singleBlog(item.link)">
+     <h2 class="rail-tool-title"> {{item.title |  slice:0:50}}... </h2>
+      </ion-card-title>
+    <p>
+     {{item.date | date: "dd-MM-yyyy HH:mm a"}} 
+    </p>
+  </ion-card-content>
+</ion-card>
+  </div>
+    
+  
+ <div style="margin-top:50px;"></div>
+
 </ion-content>
